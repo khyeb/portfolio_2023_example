@@ -1,3 +1,4 @@
+body, html {scroll-behavior:smooth;}
 /* 반응형 대비 최소 제한너비 설정 */
 header,main {min-width:900px;}
 /* header */
@@ -33,11 +34,11 @@ main #home h1 {padding-top:300px;}
 main #home h1 img {}
 main #home .mouse {
     position:absolute; left:50%; bottom:33px;
-    animation: mouse_move 1s linear alternate infinite;
+    transform:translateX(-50%);
 }
-main #home .mouse img {}
+main #home .mouse img {animation: mouse_move 1s linear alternate infinite;}
 /* skill */
-main #skill {background:#fffaee; padding-top:100px;}
+main #skill {background:#fffaee; padding-bottom:150px;}
 main #skill h1 {
     text-align: center;
     font-size:2.625rem;
@@ -54,9 +55,10 @@ main #skill h1::after {
 }
 main #skill .container {
     /* 스킬 9개 수직 줄바꿈 */
-    display:flex; flex-flow: column wrap; justify-content: flex-start; align-content:space-between;
+    display:flex; flex-flow: column wrap; align-content:space-between;
     height:675px;
 }
+
 main #skill .container li {
     /* 아이콘, 글자 옆으로 배치 */
     display:flex; flex-flow:row nowrap; align-items:center;
@@ -68,7 +70,7 @@ main #skill .container li .icon {width:55px;}
 main #skill .container li .icon img {}
 main #skill .container li .contents {width:calc(100% - 55px); line-height:30px; font-size:1.250rem;}
 /* profile */
-main #profile {padding-top:100px; background:#fffaee;}
+main #profile {background:#fffaee;  padding-bottom:150px;}
 main #profile h1 {
     margin-bottom:72px;
 }
@@ -99,24 +101,25 @@ main #profile .container .contents .license dd:last-child {margin:0;}
 main #profile .container .contents dl dd span {font-size:1.750rem;}
 main #profile .container .contents dl dd span:first-child {margin-right:30px; font-weight:500;}
 /* project web 1 */
-main #project_web1 {}
+main #project_web1 {background:#fffaee;}
 main #project_web1 h1 {letter-spacing:-0.02rem;}
 main #project_web1 h1 span {font-size:2.375rem; font-weight:700;}
 main #project_web1 h1 span:nth-child(2) {color:#002A96}
-main #project_web1 .project_info {background:pink; padding:65px 0 38px}
+main #project_web1 .project_info {padding:65px 0 38px}
 main #project_web1 .project_info p {letter-spacing: -0.02em; line-height:47px; font-size:1.688rem;}
 main #project_web1 .link {display:flex;}
 main #project_web1 .link a {
     margin-right:40px;
+    padding:22px 14px;
+    background: #323232;
+    border-radius:14px;
     letter-spacing:-0.02em;
     font-size:1.750rem;
     font-weight:700;
-    background-color: aqua;
-    padding:22px 14px;
-    border-radius:14px;
+    color:#fff;
 }
-main #project_web1 .link a:last-child {margin:0;}
-main #project_web1 .preview {}
+main #project_web1 .link a:last-child {margin:0; background:#002A96;}
+main #project_web1 .preview {text-align: center;}
 main #project_web1 .preview img {}
 /* keyframes */
 @keyframes mouse_move {
