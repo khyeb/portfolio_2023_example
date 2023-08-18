@@ -1,0 +1,125 @@
+/* 반응형 대비 최소 제한너비 설정 */
+header,main {min-width:900px;}
+/* header */
+header {
+    background:#fffaee;
+    position:fixed; left:0; top:0; width:100%; z-index:999;
+    padding:45px 60px 0px 60px;
+}
+header nav {
+    display:flex; flex-flow:row nowrap; justify-content:space-between;
+    border-top:1px solid #000;
+    border-bottom:6px solid #000;
+    padding: 22px 0;
+}
+header nav .gnb {}
+header nav .gnb a {
+    margin-right:30px;
+}
+header nav .gnb a:last-child {
+    margin:0;
+}
+header nav .gnb a:hover {
+    color:#002A96;
+}
+header nav .sns {}
+header nav .sns span {
+}
+/* home */
+main {}
+main > *{padding:0 30px;}
+main #home {background:#fffaee; height:100vh; text-align:center;}
+main #home h1 {padding-top:300px;}
+main #home h1 img {}
+main #home .mouse {
+    position:absolute; left:50%; bottom:33px;
+    animation: mouse_move 1s linear alternate infinite;
+}
+main #home .mouse img {}
+/* skill */
+main #skill {background:#fffaee; padding-top:100px;}
+main #skill h1 {
+    text-align: center;
+    font-size:2.625rem;
+    color: #002A96;
+    font-weight:700;
+}
+main #skill h1::after {
+    position:relative; top:0; left:3px;
+    content:'';
+    display:block;
+    width:119px; height:3px;
+    background:#000;
+    margin:16px auto 86px;
+}
+main #skill .container {
+    /* 스킬 9개 수직 줄바꿈 */
+    display:flex; flex-flow: column wrap; justify-content: flex-start; align-content:space-between;
+    height:675px;
+}
+main #skill .container li {
+    /* 아이콘, 글자 옆으로 배치 */
+    display:flex; flex-flow:row nowrap; align-items:center;
+    width:46%;
+    padding:40px 0;
+    border-bottom:1px solid #aaa;
+}
+main #skill .container li .icon {width:55px;}
+main #skill .container li .icon img {}
+main #skill .container li .contents {width:calc(100% - 55px); line-height:30px; font-size:1.250rem;}
+/* profile */
+main #profile {padding-top:100px; background:#fffaee;}
+main #profile h1 {
+    margin-bottom:72px;
+}
+main #profile h1 img {}
+main #profile .container {
+    display:flex; flex-flow:row nowrap; justify-content:space-between
+}
+main #profile .container .info {
+    letter-spacing:-0.02em;
+    text-align: center;
+}
+main #profile .container .info p {margin-bottom:40px;}
+main #profile .container .info p:last-child {margin:0px;}
+main #profile .container .info .photo {width:298px;}
+main #profile .container .info .photo img{width:100%;}
+main #profile .container .info h2 {margin-bottom:15px;}
+main #profile .container .info h2 em,
+main #profile .container .info h2 span {font-weight:700; color:#002A96}
+main #profile .container .info h2 em {font-size:2.188rem;}
+main #profile .container .info h2 span {font-size:1.875rem;}
+main #profile .container .info .email {font-size:1.875rem; font-weight:700; color:#002A96}
+main #profile .container .info .character {font-size:1.750rem;}
+main #profile .container .contents dl {margin-bottom:87px;}
+main #profile .container .contents dl:last-child {margin:0;}
+main #profile .container .contents dl dt {font-weight:700; font-size:1.750rem; margin-bottom:25px; color:#002A96}
+main #profile .container .contents dl dd {margin-bottom:35px;}
+main #profile .container .contents .license dd:last-child {margin:0;}
+main #profile .container .contents dl dd span {font-size:1.750rem;}
+main #profile .container .contents dl dd span:first-child {margin-right:30px; font-weight:500;}
+/* project web 1 */
+main #project_web1 {}
+main #project_web1 h1 {letter-spacing:-0.02rem;}
+main #project_web1 h1 span {font-size:2.375rem; font-weight:700;}
+main #project_web1 h1 span:nth-child(2) {color:#002A96}
+main #project_web1 .project_info {background:pink; padding:65px 0 38px}
+main #project_web1 .project_info p {letter-spacing: -0.02em; line-height:47px; font-size:1.688rem;}
+main #project_web1 .link {display:flex;}
+main #project_web1 .link a {
+    margin-right:40px;
+    letter-spacing:-0.02em;
+    font-size:1.750rem;
+    font-weight:700;
+    background-color: aqua;
+    padding:22px 14px;
+    border-radius:14px;
+}
+main #project_web1 .link a:last-child {margin:0;}
+main #project_web1 .preview {}
+main #project_web1 .preview img {}
+/* keyframes */
+@keyframes mouse_move {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(-20px);}
+}
